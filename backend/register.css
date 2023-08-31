@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(bg.jpg)no-repeat;
+}
+
+h2 {
+    text-align: center;
+    font-size: xx-large;
+    color:white;
+    font-weight: bold; 
+}
+
+#div1 {
+    position: relative;
+    left: 30%;
+    margin: 20px;
+    padding: 23px;
+    height: 50%;
+    width: 450px;
+    border-radius: 10px;
+    background-color: #333A56;
+    background-color: rgba(0, 0, 0, 0.712);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input_sec {
+    position: relative;
+    top: auto;
+    left: 150px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+}
+
+.input_sec:hover,
+.input_sec:focus {
+    background: #e5f6f2;
+    outline: none;
+    font-weight: 200;
+}
+
+label{
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.703);
+}
+
+.lab {
+    position: absolute;
+    top: auto;
+    margin: 15px;
+    left: 15px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 250px;
+    height: 40px;
+    margin: 20px 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+    
+}
+
+#resetbtn {
+    background-color: red;
+}
+
+#submitbtn {
+    background-color: #04AA6D;
+}
+
+button:hover {
+    color: white;
+    opacity: 0.7;
+}
+
+button:focus {
+    background-color: rgb(134, 143, 119);
+}
+
+.term-cond{
+    text-align: center;
+
+}
+
+.rightreserved{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn,
+    .submitbtn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(bg.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logfield {
+    position: relative;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.712);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+    /* text-decoration: none; */
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+label {
+    color: white;
+}
+
+#log {
+    height: 35px;
+    width: 342px;
+    color: white;
+    background-color: #04AA6D;
+}
+
+#log:hover {
+    color: rgba(255, 255, 255, 0.403);
+}
+
+#log:active {
+    color: rgba(255, 255, 255, 0.403);
+}
+
+#log:focus {
+    color: rgba(255, 255, 255, 0.403);
+}
+
+input {
+    height: 30px;
+    width: 342px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+svg {
+    color: white;
+    padding-bottom: 2px;
+}
+
+.forgot {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+.rightreserved {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+
+}

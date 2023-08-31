@@ -1,0 +1,13 @@
+// for images
+	$filename = $_FILES["uploadimage"]["name"];
+    $tmpName = $_FILES['uploadimage']["tmp_name"];
+    $folder = "uploads/".$filename;
+
+    move_uploaded_file($tmpName, $folder);
+
+	
+    $query = "INSERT INTO IMAGE_INFO VALUES('$cit_no','$full_name','$folder')";
+
+    <?php
+    error_reporting(0);
+?>
