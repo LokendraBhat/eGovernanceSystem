@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="signup learn">
-    <meta name="description" content="Hello this is Lokendra">
     <meta name="author" content="Lokendra Bhat">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.jpg" type="image/x-icon">
@@ -14,7 +12,7 @@
 
 <body>
     <div id="div1">
-        <form action="register.php" method="post" id="upForm" onsubmit="return doSubmit()">
+        <form onsubmit="return doValidate()" action="register.php" method="post" id="upForm">
             <h2>Register Here</h2>
             <label for="fname" class="lab">Full Name:</label>
             <input type="text" name="fname" id="fna" class="input_sec">
@@ -22,7 +20,6 @@
             <label for="phno" class="lab">Phone No.:</label>
             <input type="text" name="phone" id="phno" class="input_sec">
             <br>
-
             <label for="email" class="lab">Email:</label>
             <input type="email" name="Email" id="email" class="input_sec">
             <br>
@@ -44,10 +41,9 @@
                 <option value="female">Female</option>
                 <option value="other">Other</option>
             </select><br>
-            <hr>
+            <hr><br>
             <div class="term-cond">
                 <input type="checkbox" id="check">
-
                 <label for="check">Accept all <a href="termAndCondition.html" name="term-condition" target="_blank">term and
                         conditions</a></label>
             </div>
@@ -56,25 +52,11 @@
                 <button type="submit" name="submit" id="submitbtn">Submit</button>
             </div>
         </form>
-
-        <div id="error-messages" style="color:red; text-align: center;">
-        </div><br>
         <div class="rightreserved">
             © 2023 Government Of Nepal. All Rights Reserved
         </div>
     </div>
-    <script type="text/javascript">
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const errorMessage = urlParams.get("error");
-
-            if (errorMessage) {
-                const errorDiv = document.getElementById("error-messages");
-                errorDiv.textContent = errorMessage;
-            }
-        };
-    </script>
-    <script type="text/javascript" src="validation.js"></script>
+    <script src="validation.js"></script>
 </body>
 
 </html>

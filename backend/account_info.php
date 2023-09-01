@@ -1,7 +1,6 @@
 <?php
 error_reporting(0);
 
-
 require 'connection.php';
 $_cit_id = $_GET['cit_id'];
 
@@ -44,7 +43,6 @@ if ($result) {
     $Amount = $row['Amount'];
     $withdrawl = $row['withdraw_date'];
 }
-
 
 ?>
 
@@ -110,13 +108,21 @@ if ($result) {
             </div>
         </div>
     </section>
-
+    <a href="userinfo.php?cit_id=<?php echo $_cit_id?>"><button type="button" class="btn btn-primary"  style="
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 10%;
+            cursor: pointer;
+            z-index: 100;
+        ">User</button></a>
     <section>
         <!-- Modal -->
         <div class="modal fade" id="popmsg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-                <form class="modal-content" action="account_info" method="post">
 
+                <!-- Form -->
+                <form class="modal-content" action="withdraw_msg.php?cit_id=<?php echo $_cit_id?>" method="post">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Withdraw</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -153,10 +159,10 @@ if ($result) {
                                                             <p class="mb-1 small text-primary">Withdrawal Amount</p>
                                                             <div>
                                                                 <label class="text-primary" for='rupee'>NPR.: </label>
-                                                                <input type="text" class="form-control form-control-sm" id="rupee" style="margin-left:5px;" />
+                                                                <input type="text" class="form-control form-control-sm" id="rupee" name="w_amount" style="margin-left:5px;" />
                                                                 <br>
                                                                 <label class="text-primary" for='psw'>Password: </label>
-                                                                <input type="text" class="form-control form-control-sm" id="psw" style="margin-left:5px;" />
+                                                                <input type="password" class="form-control form-control-sm" id="psw" style="margin-left:5px;" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -190,6 +196,12 @@ if ($result) {
                 return false;
             } else if (amount > <?php echo $Amount ?>) {
                 alert("You don't have enough balance");
+                return false;
+            } else if(amount < 100){
+                alert("Minimum withdrawl amount is 100");
+                return false;
+            } else if(amount % 100 != 0){
+                alert("Withdrawl amount should be multiple of 100");
                 return false;
             } else if (password != "<?php echo $password ?>") {
                 alert("Password is incorrect");

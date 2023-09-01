@@ -180,7 +180,16 @@ h3{
 
 /*-----------Home button------------*/
 #homebtn{
-    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f44336;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
     z-index: 100;
 }
 

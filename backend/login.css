@@ -9,7 +9,7 @@ section {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url(bg.jpg)no-repeat;
+    background: url(bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -44,24 +44,6 @@ label {
     color: white;
 }
 
-#log {
-    height: 35px;
-    width: 342px;
-    color: white;
-    background-color: #04AA6D;
-}
-
-#log:hover {
-    color: rgba(255, 255, 255, 0.403);
-}
-
-#log:active {
-    color: rgba(255, 255, 255, 0.403);
-}
-
-#log:focus {
-    color: rgba(255, 255, 255, 0.403);
-}
 
 input {
     height: 30px;

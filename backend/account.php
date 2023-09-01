@@ -38,9 +38,6 @@ header("Location: userinfo.php?cit_id=$id");
 else{
    header("location:account_info.php?cit_id=$id");
 }
-
-
-
-
+mysqli_close($conn);
 
 ?>
