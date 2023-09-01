@@ -26,6 +26,7 @@
            h2 {
                margin: 50px 0;
                text-align: center;
+               text-transform: uppercase;
            }
 
            .file-drop-area {
@@ -72,15 +73,14 @@
            }
 
            .mt-100 {
-               margin-top: 50px;
+               margin-top: 10px;
            }
 
            #upl {
-               position: fixed;
-               top: 50px;
-               right: 50px;
+               float: right;
+               margin-top: 10vh;
                width: 200px;
-               height: 50px;
+               height: 60px;
                text-transform: uppercase;
            }
        </style>
@@ -91,14 +91,14 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <!-- Include Bootstrap JavaScript with jQuery dependency -->
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-       <form method="POST" action="save_photo.php" enctype="multipart/form-data">
 
-           <!-- Upload section -->
-           <div class="container d-flex justify-content-center mt-100">
-               <div class="row">
-                   <div class="col-md-12">
-                       <h2>Upload Here</h2>
+       <!-- Upload section -->
+       <div class="container d-flex justify-content-center mt-100">
+           <div class="row">
+               <div class="col-md-12">
+                   <h2>Upload Here</h2>
 
+                   <form method="POST" action="save_photo.php" enctype="multipart/form-data">
                        <!-- Upload Photo -->
                        <label for="pp" class="lab">Upload Photo:</label>
                        <div class="file-drop-area">
@@ -114,17 +114,14 @@
                            <span class="file-message">or drag and drop files here</span>
                            <input type="file" id="cc" name="cit_photo" class="file-input" />
                        </div>
-                   </div>
-                   <br><br>
-                   <hr>
-
-                   <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-                   <input type="submit" class="btn btn-primary" name="submit" value="upload File" id="upl" onclick="return doValidateFile()">
+                       <div>
+                           <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+                           <input type="submit" class="btn btn-primary" name="submit" value="upload File" id="upl" onclick="return doValidateFile()">
+                       </div>
+                   </form>
                </div>
            </div>
-
-
-       </form>
+       </div>
        <script>
            $(document).on('change', '.file-input', function() {
                var filesCount = $(this)[0].files.length;
