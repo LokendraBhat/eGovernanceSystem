@@ -57,7 +57,7 @@ $result2 = mysqli_query($conn,$query);
     $current_date = $current_date->format('Y-m-d');
     // fetch 
     
-    $sql = "INSERT INTO account_info VALUES('$cit_id','$amount','$current_date',NULL)";
+    $sql = "INSERT INTO account_info VALUES('$cit_id','$amount','$current_date')";
     $result3 = mysqli_query($conn,$sql);
     if($result3){
             header("location:login.html");
