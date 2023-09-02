@@ -1,6 +1,8 @@
 # eGovernanceProject
 SENIOR ALLOWANCE ONLINE
 
+# Special thanks to my friends for their contribution and help: Bhabuk Ghimire and Dipesh Gyawali
+
 # Features:
 
 •	Registration: Allow citizens to create accounts with necessary details.
