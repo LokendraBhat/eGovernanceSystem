@@ -25,3 +25,11 @@ The database includes four data tables named register_info, login_info, image_in
 - login_info: cit_id (primary key), email, password
 - image_info: id (primary key), img_name, cit_image
 - account_info: cit_id (primary key), Amount, arrival_date, withdraw_date
+
+## FOLLOW FOLLOWING STEPS TO RUN GIVEN CODE
+- Install xampp and start Apache and mysql
+- Fork this repository into your local storage location C:\xampp\htdocs\egovernance
+- goto browser and search localhost/phpmyadmin
+    - Create a database named "e_governance"
+    - Now add the tables specified as above #Database section with same attributes
+- Now, search in the new tab localhost/egovernance to use.
