@@ -1,4 +1,4 @@
-# eGovernanceProject
+# E-GovernanceProject
 SENIOR ALLOWANCE ONLINE
 
 # Special thanks to my friends for their contribution: Bhabuk Ghimire and Dipesh Gyawali
